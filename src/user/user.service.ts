@@ -23,8 +23,8 @@ export class UserService {
 		return this.userModel.find().exec();
 	}
 
-	async findOne(id: string): Promise<User> {
-		return this.userModel.findOne({ _id: id }).exec();
+	async findOne(account: string): Promise<User> {
+		return this.userModel.findOne({ account }).exec();
 	}
 
 	async delete(id: string) {
